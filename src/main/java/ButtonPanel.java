@@ -6,9 +6,11 @@ import java.awt.event.ActionListener;
 public class ButtonPanel extends JPanel {
     private JButton but1;
     private JButton but2;
+    private JCheckBox cb1;
 
     public ButtonPanel() {
-        setLayout(new GridLayout(1,2)); // One row, one column
+//        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setLayout(new GridLayout(1,3));// One row, one column
         but1 = new JButton("Press me");
         but1.addActionListener(new ActionListener() {
             @Override
@@ -26,5 +28,8 @@ public class ButtonPanel extends JPanel {
             }
         });
         add(but2);
+
+        cb1 = new JCheckBox("I pressed button a button");
+        add(cb1);
     }
 }
